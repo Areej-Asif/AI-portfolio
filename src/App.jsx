@@ -18,7 +18,7 @@ export default function App() {
         </p>
 
         <div style={styles.contact}>
-          <p>📧 jeerafisa2.com</p>
+          <p>📧 jeerafisa2@gmail.com</p>
           <p>📞 +90 505 674 66 78</p>
           <p>📍 Karabuk, Türkiye</p>
         </div>
