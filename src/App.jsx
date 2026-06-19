@@ -2,91 +2,131 @@ export default function App() {
   return (
     <div style={styles.page}>
 
-      {/* HERO SECTION */}
+      {/* HERO */}
       <section style={styles.hero}>
-
-        <div style={styles.glow}></div>
-
-        <img
-          src="/profile.jpg"
-          alt="profile"
-          style={styles.profile}
-        />
 
         <h1 style={styles.name}>Areej Asif</h1>
 
         <p style={styles.role}>
-          AI Engineer • Computer Engineering • Marketing Specialist
+          AI Engineer • Computer Engineering Student • Marketing Specialist
         </p>
 
         <p style={styles.summary}>
           Building intelligent systems using Artificial Intelligence, Machine Learning,
-          GIS technologies, databases, and modern full-stack web development.
-          Strong background in marketing strategy and digital growth systems.
+          GIS technologies, databases, and modern web development. Strong experience in
+          marketing strategy, email automation, and digital analytics.
         </p>
 
         <div style={styles.contact}>
-          <p>📧 jeerafisa2@gmail.com</p>
+          <p>📧 jeerafisa2.com</p>
           <p>📞 +90 505 674 66 78</p>
           <p>📍 Karabuk, Türkiye</p>
         </div>
+
       </section>
 
       {/* ABOUT */}
       <section style={styles.card}>
         <h2>About Me</h2>
         <p>
-          I am a Computer Engineering student focused on AI systems, data-driven applications,
-          and intelligent automation. I enjoy building real-world solutions using Python,
-          React, and Machine Learning. My marketing experience helps me design user-focused systems.
+          I am a Computer Engineering student focused on AI systems, software engineering,
+          and data-driven applications. I enjoy building real-world solutions using Python,
+          React, and Machine Learning. My marketing background helps me design user-focused systems.
         </p>
+      </section>
+
+      {/* EDUCATION */}
+      <section style={styles.card}>
+        <h2>Education</h2>
+        <p><b>Karabuk University</b></p>
+        <p>Bachelor of Computer Engineering</p>
+        <p>Specialization: AI, Machine Learning, Databases, Software Engineering</p>
+      </section>
+
+      {/* EXPERIENCE */}
+      <section style={styles.card}>
+        <h2>Experience</h2>
+
+        <div style={styles.item}>
+          <h3>Marketing Specialist (4+ Years)</h3>
+          <p>
+            • Email marketing campaigns<br/>
+            • Customer engagement strategy<br/>
+            • Brand growth and analytics<br/>
+            • Conversion optimization
+          </p>
+        </div>
+
+        <div style={styles.item}>
+          <h3>Email Marketing Lead</h3>
+          <p>
+            • Designed automated email funnels<br/>
+            • Improved engagement using analytics<br/>
+            • Managed campaign performance tracking
+          </p>
+        </div>
       </section>
 
       {/* SKILLS */}
       <section style={styles.card}>
         <h2>Skills</h2>
+
         <div style={styles.skills}>
           {[
-            "Python", "Java", "C++", "React", "JavaScript",
-            "SQL", "Machine Learning", "Deep Learning",
-            "GIS Systems", "Git", "Docker"
-          ].map((s, i) => (
-            <span key={i} style={styles.skill}>{s}</span>
+            "Python",
+            "Java",
+            "C++",
+            "React",
+            "JavaScript",
+            "SQL",
+            "Machine Learning",
+            "Deep Learning",
+            "GIS Systems",
+            "Git & GitHub",
+            "Docker"
+          ].map((skill, i) => (
+            <span key={i} style={styles.skill}>
+              {skill}
+            </span>
           ))}
         </div>
       </section>
 
-      {/* PREMIUM GALLERY (NEW APPLE STYLE SECTION) */}
-      <section style={styles.gallerySection}>
-        <h2 style={{ textAlign: "center" }}>Projects Gallery</h2>
+      {/* PROJECTS */}
+      <section style={styles.card}>
+        <h2>Projects</h2>
 
-        <div style={styles.grid}>
+        <div style={styles.project}>
+          <h3>AI Chatbot System</h3>
+          <p>Smart conversational AI system using React and logic-based responses.</p>
+        </div>
 
-          <div style={styles.cardHover}>
-            <img src="/app1.jpg" style={styles.image} />
-            <h3>AI Chatbot System</h3>
-            <p>Smart conversational AI system built with React.</p>
-          </div>
+        <div style={styles.project}>
+          <h3>Machine Learning Prediction Model</h3>
+          <p>Data classification and predictive analytics using Python.</p>
+        </div>
 
-          <div style={styles.cardHover}>
-            <img src="/filecore.jpg" style={styles.image} />
-            <h3>FileCore System</h3>
-            <p>Advanced file management and optimization system.</p>
-          </div>
+        <div style={styles.project}>
+          <h3>GIS Mapping Platform</h3>
+          <p>Geographic data visualization and spatial analysis system.</p>
+        </div>
 
+        <div style={styles.project}>
+          <h3>Database Optimization System</h3>
+          <p>SQL performance tuning and relational database design.</p>
         </div>
       </section>
 
       {/* FOOTER */}
       <footer style={styles.footer}>
-        © 2026 Areej Asif • Designed with Premium UI Engineering
+        © 2026 Areej Asif • AI Engineering Portfolio
       </footer>
 
     </div>
   );
 }
 
-/* ================= PREMIUM STYLES ================= */
+/* ===== PREMIUM STYLES ===== */
 
 const styles = {
 
@@ -100,31 +140,7 @@ const styles = {
 
   hero: {
     textAlign: "center",
-    padding: "90px 20px",
-    position: "relative"
-  },
-
-  glow: {
-    position: "absolute",
-    top: "10%",
-    left: "50%",
-    transform: "translateX(-50%)",
-    width: "300px",
-    height: "300px",
-    background: "rgba(124,58,237,0.4)",
-    filter: "blur(120px)",
-    zIndex: 0
-  },
-
-  profile: {
-    width: "150px",
-    height: "150px",
-    borderRadius: "50%",
-    objectFit: "cover",
-    border: "3px solid rgba(255,255,255,0.2)",
-    boxShadow: "0 0 30px rgba(124,58,237,0.5)",
-    position: "relative",
-    zIndex: 1
+    padding: "90px 20px"
   },
 
   name: {
@@ -155,8 +171,7 @@ const styles = {
     padding: "25px",
     background: "rgba(255,255,255,0.05)",
     borderRadius: "16px",
-    border: "1px solid rgba(255,255,255,0.1)",
-    backdropFilter: "blur(10px)"
+    border: "1px solid rgba(255,255,255,0.1)"
   },
 
   skills: {
@@ -169,41 +184,23 @@ const styles = {
     padding: "8px 12px",
     background: "rgba(255,255,255,0.08)",
     borderRadius: "20px",
-    fontSize: "14px",
-    border: "1px solid rgba(255,255,255,0.1)"
+    fontSize: "14px"
   },
 
-  gallerySection: {
-    maxWidth: "1000px",
-    margin: "60px auto",
-    padding: "20px"
+  item: {
+    marginBottom: "15px"
   },
 
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-    gap: "20px",
-    marginTop: "20px"
-  },
-
-  cardHover: {
-    padding: "15px",
-    borderRadius: "16px",
-    background: "rgba(255,255,255,0.05)",
-    border: "1px solid rgba(255,255,255,0.1)",
-    transition: "0.3s",
-    cursor: "pointer"
-  },
-
-  image: {
-    width: "100%",
-    borderRadius: "12px",
-    marginBottom: "10px"
+  project: {
+    marginBottom: "15px",
+    padding: "10px",
+    background: "rgba(255,255,255,0.03)",
+    borderRadius: "10px"
   },
 
   footer: {
     textAlign: "center",
-    marginTop: "60px",
+    marginTop: "50px",
     opacity: 0.5
   }
 };
