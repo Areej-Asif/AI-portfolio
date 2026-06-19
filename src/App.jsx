@@ -1,5 +1,3 @@
-import Chatbot from "./components/Chatbot";
-
 export default function App() {
   return (
     <div style={styles.page}>
@@ -7,17 +5,17 @@ export default function App() {
       {/* HERO */}
       <section style={styles.hero}>
         <h1 style={styles.title}>Areej Asif</h1>
-        <p style={styles.subtitle}>AI Engineer • Computer Engineering • Marketing Systems</p>
+        <p style={styles.subtitle}>AI Engineer • Computer Engineering • Marketing</p>
         <p style={styles.desc}>
-          I build intelligent AI systems, machine learning models, and modern web applications.
+          I build intelligent systems using AI, machine learning, databases, GIS, and modern web technologies.
         </p>
       </section>
 
       {/* ABOUT */}
       <section style={styles.card}>
-        <h2>About</h2>
+        <h2>About Me</h2>
         <p>
-          Computer Engineering student focused on AI, ML, databases, and GIS systems.
+          Computer Engineering student focused on AI systems, data science, and software engineering.
         </p>
       </section>
 
@@ -25,8 +23,20 @@ export default function App() {
       <section style={styles.card}>
         <h2>Skills</h2>
         <div style={styles.grid}>
-          {["Python","Java","React","SQL","ML","GIS","Git"].map((s,i)=>(
-            <div key={i} style={styles.badge}>{s}</div>
+          {[
+            "Python",
+            "Java",
+            "C++",
+            "React",
+            "JavaScript",
+            "SQL",
+            "Machine Learning",
+            "GIS Systems",
+            "Git",
+          ].map((skill, i) => (
+            <span key={i} style={styles.badge}>
+              {skill}
+            </span>
           ))}
         </div>
       </section>
@@ -35,19 +45,16 @@ export default function App() {
       <section style={styles.card}>
         <h2>Projects</h2>
         <ul>
-          <li>AI Chatbot System</li>
-          <li>Machine Learning Models</li>
-          <li>GIS Mapping System</li>
-          <li>Database Optimization</li>
+          <li>AI Chatbot System (Concept)</li>
+          <li>Machine Learning Prediction Models</li>
+          <li>GIS Mapping Platform</li>
+          <li>Database Optimization System</li>
         </ul>
       </section>
 
-      {/* CHATBOT */}
-      <Chatbot />
-
       {/* FOOTER */}
       <footer style={styles.footer}>
-        © 2026 Areej Asif
+        © 2026 Areej Asif • AI & Engineering Portfolio
       </footer>
 
     </div>
@@ -57,44 +64,54 @@ export default function App() {
 const styles = {
   page: {
     minHeight: "100vh",
-    background: "linear-gradient(135deg,#0f172a,#1e293b)",
+    background: "linear-gradient(135deg, #0f172a, #1e293b)",
     color: "white",
     fontFamily: "Arial",
     padding: "20px"
   },
+
   hero: {
     textAlign: "center",
-    padding: "70px 20px"
+    padding: "80px 20px"
   },
+
   title: {
     fontSize: "60px",
-    marginBottom: "10px"
+    margin: 0
   },
+
   subtitle: {
-    opacity: 0.8
+    opacity: 0.8,
+    fontSize: "18px"
   },
+
   desc: {
     maxWidth: "600px",
     margin: "20px auto",
     opacity: 0.6
   },
+
   card: {
     maxWidth: "900px",
-    margin: "25px auto",
+    margin: "30px auto",
     padding: "20px",
     background: "rgba(255,255,255,0.06)",
     borderRadius: "12px"
   },
+
   grid: {
     display: "flex",
-    gap: "10px",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    gap: "10px"
   },
+
   badge: {
     padding: "8px 12px",
     background: "#111",
-    borderRadius: "8px"
+    borderRadius: "8px",
+    fontSize: "14px"
   },
+
   footer: {
     textAlign: "center",
     marginTop: "50px",
