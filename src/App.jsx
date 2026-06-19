@@ -2,82 +2,87 @@ import Chatbot from "./components/Chatbot";
 
 export default function App() {
   return (
-    <div style={styles.page}>
+    <div style={{
+      minHeight: "100vh",
+      background: "linear-gradient(135deg, #0f172a, #1e293b)",
+      color: "white",
+      fontFamily: "Arial",
+      padding: "20px"
+    }}>
 
       {/* HERO */}
-      <section style={styles.hero}>
-        <h1 style={styles.title}>Areej Asif</h1>
-        <p style={styles.subtitle}>AI Engineer • Computer Engineering • Marketing</p>
-        <p style={styles.desc}>
-          I build intelligent systems using AI, machine learning, databases, and modern web technologies.
-        </p>
-      </section>
+      <div style={{
+        textAlign: "center",
+        padding: "80px 20px"
+      }}>
+        <h1 style={{
+          fontSize: "60px",
+          marginBottom: "10px"
+        }}>
+          Areej Asif
+        </h1>
 
-      {/* ABOUT */}
-      <section style={styles.card}>
-        <h2>About Me</h2>
-        <p>
-          Computer Engineering student specializing in AI, ML, GIS systems, and software development.
+        <p style={{ fontSize: "18px", opacity: 0.8 }}>
+          AI Engineer • Computer Engineering • Marketing
         </p>
-      </section>
 
-      {/* PROJECTS */}
-      <section style={styles.card}>
-        <h2>Projects</h2>
-        <ul>
-          <li>AI Chatbot System</li>
-          <li>Machine Learning Models</li>
-          <li>GIS Mapping System</li>
-          <li>Database Optimization</li>
-        </ul>
-      </section>
+        <p style={{
+          maxWidth: "600px",
+          margin: "20px auto",
+          opacity: 0.6
+        }}>
+          Building intelligent AI systems, machine learning models,
+          databases, GIS platforms, and modern web applications.
+        </p>
+      </div>
+
+      {/* CARDS */}
+      <div style={{
+        maxWidth: "900px",
+        margin: "0 auto",
+        display: "grid",
+        gap: "20px"
+      }}>
+
+        <div style={cardStyle}>
+          <h2>About</h2>
+          <p>
+            Computer Engineering student focused on AI, ML, and software systems.
+          </p>
+        </div>
+
+        <div style={cardStyle}>
+          <h2>Skills</h2>
+          <p>React • Python • Java • SQL • Machine Learning • GIS • Git</p>
+        </div>
+
+        <div style={cardStyle}>
+          <h2>Projects</h2>
+          <p>AI Chatbot • ML Models • GIS System • Database Projects</p>
+        </div>
+      </div>
 
       {/* CHATBOT */}
-      <Chatbot />
+      <div style={{ marginTop: "40px" }}>
+        <Chatbot />
+      </div>
 
       {/* FOOTER */}
-      <footer style={styles.footer}>
+      <div style={{
+        textAlign: "center",
+        marginTop: "60px",
+        opacity: 0.5
+      }}>
         © 2026 Areej Asif
-      </footer>
+      </div>
 
     </div>
   );
 }
 
-const styles = {
-  page: {
-    fontFamily: "Arial",
-    background: "linear-gradient(135deg,#0f0f0f,#1a1a2e)",
-    color: "white",
-    minHeight: "100vh",
-    padding: "20px"
-  },
-  hero: {
-    textAlign: "center",
-    padding: "80px 20px"
-  },
-  title: {
-    fontSize: "60px",
-    margin: 0
-  },
-  subtitle: {
-    opacity: 0.7
-  },
-  desc: {
-    maxWidth: "600px",
-    margin: "20px auto",
-    opacity: 0.6
-  },
-  card: {
-    maxWidth: "800px",
-    margin: "30px auto",
-    padding: "20px",
-    background: "rgba(255,255,255,0.05)",
-    borderRadius: "12px"
-  },
-  footer: {
-    textAlign: "center",
-    marginTop: "50px",
-    opacity: 0.5
-  }
+const cardStyle = {
+  background: "rgba(255,255,255,0.08)",
+  padding: "20px",
+  borderRadius: "12px",
+  backdropFilter: "blur(10px)"
 };
